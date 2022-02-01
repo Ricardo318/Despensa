@@ -50,5 +50,11 @@ if(!$validacion){
         $despensaController->eliminarDespensa($producto);
         
     }
+    
+     if($op=="finalizar"){
+        $producto = $_GET['producto'];
+        $despensaController->eliminarDespensa($producto);
+        
+    }
 }  
 ?>
