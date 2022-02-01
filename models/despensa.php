@@ -49,6 +49,13 @@ require_once("bd.php");
         $stmt->execute();
     
     }
+   public function finalizarProducto($producto){
+        $db= new DB();
+        $stmt =  $db->getConexion()->prepare("DELETE FROM alimentos WHERE producto = ?");
+        $stmt->bindParam(1, $producto);
+        $stmt->execute();
+    
+    }
 
       public function listarProductos()
    {
